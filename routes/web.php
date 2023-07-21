@@ -1,7 +1,6 @@
 <?php
 
 use App\Http\Controllers\auth\AuthController;
-use App\Http\Controllers\admin\DashboardController;
 use App\Http\Controllers\LandingPageController;
 use Illuminate\Support\Facades\Route;
 
@@ -30,4 +29,4 @@ Route::get('/register', [AuthController::class, 'register_page'])->name('registe
 Route::post('/register/logic', [AuthController::class, 'register_logic'])->name('register.logic');
 
 // ADMIN
-Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard');
+require __DIR__ . '/admin.php';

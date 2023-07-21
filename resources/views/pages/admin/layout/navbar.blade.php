@@ -4,26 +4,29 @@
     <div
     class="w-full mx-autp items-center flex justify-between md:flex-nowrap flex-wrap md:px-10 px-4"
     >
-    <a
-        class="text-white text-sm uppercase hidden lg:inline-block font-semibold"
-        href="#"
-        >Dashboard</a
-    >
-    <form
+    <div class="flex">
+        <a
+            class="text-white text-sm uppercase hidden lg:inline-block font-semibold"
+            href="{{ route('admin.dashboard') }}"
+            >Dashboard</a
+        >
+        @yield('breadcrumb')
+    </div>
+    {{-- <form
         class="md:flex hidden flex-row flex-wrap items-center lg:ml-auto mr-3"
     >
         <div class="relative flex w-full flex-wrap items-stretch">
         <span
-            class="z-10 h-full leading-snug font-normal absolute text-center text-blueGray-300 absolute bg-transparent rounded text-base items-center justify-center w-8 pl-3 py-3"
+            class="z-10 h-full leading-snug font-normal text-center text-blueGray-300 absolute bg-transparent rounded text-base items-center justify-center w-8 pl-3 py-3"
             ><i class="fas fa-search"></i
         ></span>
         <input
             type="text"
             placeholder="Search here..."
-            class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 relative bg-white bg-white rounded text-sm shadow outline-none focus:outline-none focus:ring w-full pl-10"
+            class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 relative bg-white rounded text-sm shadow outline-none focus:outline-none focus:ring w-full pl-10"
         />
         </div>
-    </form>
+    </form> --}}
     <ul
         class="flex-col md:flex-row list-none items-center hidden md:flex"
     >
@@ -47,17 +50,9 @@
         id="user-dropdown"
         >
         <a
-            href="#pablo"
+            href="#"
             class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700"
-            >Action</a
-        ><a
-            href="#pablo"
-            class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700"
-            >Another action</a
-        ><a
-            href="#pablo"
-            class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700"
-            >Something else here</a
+            >Profile</a
         >
         <div
             class="h-0 my-2 border border-solid border-blueGray-100"
@@ -65,7 +60,7 @@
         <a
             href="#pablo"
             class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700"
-            >Seprated link</a
+            >Sign Out</a
         >
         </div>
     </ul>
